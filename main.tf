@@ -1,16 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "4.45.0"
-    }
-  }
-}
-
-provider "aws" {
-  region = "us-west-2"
-}
-
 resource "aws_vpc" "vpc" {
   cidr_block           = var.vpc_cird_block
   enable_dns_hostnames = true
